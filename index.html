@@ -1,31 +1,113 @@
-<html>
-    <head>
-        <title> calculadora </title>
-        <meta charset="utf-8"/>
-        <script src="calculadora.js"></script>
-        <link rel="stylesheet" href="calculadora.css" />
-    </head>
-    <body>
-        <div style="padding: 14px; margin: 14px; width: 280px; ;">
-            <h1>Calculadora</h1>
-            <p>Essa é minha nova calculadora</p> 
-            <div id="entradas">
-                <div class="campo">
-                    <label for="fatorA">Numero A:</label> <input id="fatorA"type="number"/>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Calculadora web moderna para realizar operações matemáticas de forma simples e rápida.">
+
+    <title>Calculadora | SimpleCalc</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="calculadora.css">
+    <script src="calculadora.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <header class="topo">
+            <a href="#" class="marca">
+                <span class="marca-icone">±</span>
+                <span>Simple<span class="marca-destaque">Calc</span></span>
+            </a>
+
+            <span class="status">
+                <span class="status-ponto"></span>
+                Calculadora online
+            </span>
+        </header>
+
+        <section class="conteudo">
+
+            <div class="introducao">
+                <span class="etiqueta">FERRAMENTA MATEMÁTICA</span>
+
+                <h1>Calcule com <span>simplicidade.</span></h1>
+
+                <p>Uma maneira prática e rápida de resolver suas operações matemáticas.</p>
+            </div>
+
+            <section class="calculadora">
+
+                <div class="calculadora-topo">
+                    <div>
+                        <span class="subtitulo">SUA CALCULADORA</span>
+                        <h2>Calculadora básica</h2>
+                    </div>
+
+                    <span class="icone-calculadora">÷</span>
                 </div>
-                <div class="campo">
-                    <label for="fatorB">Numero B:</label> <input id="fatorB"type="number"/>
+
+                <div class="campos">
+
+                    <div class="campo">
+                        <label for="fatorA">Primeiro número</label>
+                        <input
+                            type="number"
+                            id="fatorA"
+                            placeholder="Digite o primeiro número"
+                            step="any"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="fatorB">Segundo número</label>
+                        <input
+                            type="number"
+                            id="fatorB"
+                            placeholder="Digite o segundo número"
+                            step="any"
+                        >
+                    </div>
+
                 </div>
-            </div>
-            <div class="botoes">  
-                <button onclick="soma()">+</button>
-                    <button onclick="subtracao()">-</button>
-                        <button onclick="multiplicacao()">*</button>
-                                <button onclick="divisao()">/</button>
-            </div>
-            <div>
-                Resultado: <span id="resultado"> </span>
-            </div>
-        </div>
-    </body>
+
+                <div class="operacoes">
+                    <span class="subtitulo">ESCOLHA A OPERAÇÃO</span>
+
+                    <div class="botoes">
+                        <button type="button" onclick="soma()" aria-label="Somar">+</button>
+                        <button type="button" onclick="subtracao()" aria-label="Subtrair">−</button>
+                        <button type="button" onclick="multiplicacao()" aria-label="Multiplicar">×</button>
+                        <button type="button" onclick="divisao()" aria-label="Dividir">÷</button>
+                    </div>
+                </div>
+
+                <div class="resultado-area" aria-live="polite">
+                    <span class="subtitulo">RESULTADO</span>
+                    <div id="resultado">0</div>
+                </div>
+
+                <p class="rodape-calculadora">
+                    Escolha os números e a operação desejada.
+                </p>
+
+            </section>
+
+            <footer class="rodape">
+                <span>SimpleCalc</span>
+                <span>Desenvolvido com HTML, CSS e JavaScript</span>
+            </footer>
+
+        </section>
+
+    </main>
+
+</body>
 </html>
